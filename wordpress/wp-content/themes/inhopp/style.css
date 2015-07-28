@@ -1,5 +1,21 @@
 @import url("theme-style.css");
 
+.header {
+  padding: 0;
+  text-align: center;
+}
+
+.site-header {
+  margin: 0;
+}
+
+.site-content {
+    display: block;
+    float: left;
+    margin-left: 0px;
+    width: 100%;
+}
+
 .unslider-arrow {
   height: 50px;
   width: 50px;
