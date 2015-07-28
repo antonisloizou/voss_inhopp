@@ -33,8 +33,8 @@ function twentyfifteen_custom_header_setup() {
 	 */
 	add_theme_support( 'custom-header', apply_filters( 'twentyfifteen_custom_header_args', array(
 		'default-text-color'     => $default_text_color,
-		'width'                  => 954,
-		'height'                 => 1300,
+		'width'                  => 1280,
+		'height'                 => 100,
 		'wp-head-callback'       => 'twentyfifteen_header_style',
 	) ) );
 }
@@ -93,6 +93,7 @@ function twentyfifteen_header_style() {
 		.site-header {
 			padding-top: 14px;
 			padding-bottom: 14px;
+			min-width: 1280px;
 		}
 
 		.site-branding {
