@@ -7,6 +7,7 @@
  * @since Voss Inhopp 1.0
  */
 ?>
+<script src="//unslider.com/unslider.min.js"></script>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
@@ -18,22 +19,20 @@
 		<?php the_content(); ?>
 		<?php
 			$args = array(
-				'category_name' => 'inhopp', 
-		//		'post_type' => 'attachment',
-		//		'posts_per_page' => -1,
-		//		'post_status' => 'any',
-		//		'post_mime_type' => 'image',
+				'category_name' => 'inhopp',
+ 				'orderby' => 'date',
+				'order' => 'ASC',
 				'post_parent' => null ); 
-			$images = get_posts( $args );
-			print_r($images);
-			if($images){ ?>
-				<div id="slider">
-				    <?php foreach($images as $image){ ?>
-					    <img src="<?php echo $image->guid; ?>" alt="<?php echo $image->post_title; ?>" title="<?php echo $image->post_title; ?>" />
-				    <?php    } ?>
+			$inhopps = get_posts( $args );
+			if($inhopps){ ?>
+				<div class="banner">
+				<ul><?php
+				foreach ($inhopps as $inhopp) {
+					echo '<li>'.get_the_post_thumbnail($inhopp->ID, 'large').'</li>'; 
+				}?>
+				</ul>
 				</div>
-			<?php }
-		?>
+			<?php } ?>
 	</div><!-- .entry-content -->
 
 	<?php edit_post_link( __( 'Edit', 'inhopp' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer><!-- .entry-footer -->' ); ?>
