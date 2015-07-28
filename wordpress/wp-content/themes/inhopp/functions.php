@@ -353,3 +353,6 @@ require get_template_directory() . '/inc/template-tags.php';
  * @since Voss Inhopp 1.0
  */
 require get_template_directory() . '/inc/customizer.php';
+
+add_image_size( 'slider-thumb', 1280, 720, 1 );
+

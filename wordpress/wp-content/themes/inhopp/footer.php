@@ -30,11 +30,5 @@
 
 <?php wp_footer(); ?>
 
-<script>
-jQuery(document).ready(function($){
-    $('.banner').unslider();
-});
-</script>
-
 </body>
 </html>
