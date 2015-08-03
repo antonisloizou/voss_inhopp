@@ -1,0 +1,142 @@
+@import url("theme-style.css");
+
+.site-title {
+  margin-bottom: 0;
+  margin-top:10px;
+  padding: 5px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  max-width:95%;
+}
+
+#colophon {
+  padding: 5px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  max-width:95%;
+}
+
+.site-description {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 5px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  max-width:95%;
+}
+
+#page {
+  background-color: #000009;
+}
+
+#masthead {
+    height: 60px;
+}
+
+#main-panel {
+    position: relative;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    max-width:95%;
+    visibility: hidden;
+}
+
+#people {
+  display: none;
+  padding: 5px;
+}
+
+#inhopp-map {
+  display: none;
+  padding: 5px;
+}
+
+.unslider-arrow {
+  position: absolute;
+  height: 15%;
+  text-decoration: none;
+  opacity: 0;
+  color: #3d3d3d;
+}
+
+.next {
+  background-image: url("images/arrow_right.svg");
+  background-size: 100%;
+  right: 0.5%;
+}
+
+.prev {
+  background-image: url("images/arrow_left.svg");
+  background-size: 100%;
+  left : 0.5%;
+}
+
+.banner {
+  position: relative;
+  max-width: 70%;
+  text-align: center;
+  float: left;
+  margin: 5px;
+}
+
+.banner ul {
+    display: block;
+    list-style-type: none;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+
+
+.banner ul li {
+  float: left;
+}
+
+.banner a {
+  top : 42.5%;
+}
+
+.banner .next,
+.banner .prev {
+  -webkit-animation-name: disappear; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 0.5s; /* Chrome, Safari, Opera */
+  animation-name: disappear;
+  animation-duration: 0.5s;
+  opacity: 0;
+}
+
+.banner:hover .next,
+.banner:hover .prev {
+  display: block;
+  opacity: 0.6;
+  -webkit-animation-name: appear; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 0.5s; /* Chrome, Safari, Opera */
+  animation-name: appear;
+  animation-duration: 0.5s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 0.6;}
+}
+
+/* Standard syntax */
+@keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 0.6;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes disappear {
+    0% {opacity: 0.6;}
+    100% {opacity: 0;}
+}
+
+/* Standard syntax */
+@keyframes disappear {
+    0% {opacity: 0.6;}
+    100% {opacity: 0;}
+}
