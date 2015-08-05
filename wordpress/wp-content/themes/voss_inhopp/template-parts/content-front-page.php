@@ -45,17 +45,17 @@
 						<img id="map-pic" src="<?php bloginfo('template_url'); ?>/images/map.jpg"/>
 						<h2>
 							<span>
-								<?php echo 'Inhopp map'; ?>
+								Inhopp map
 							</span>
 						</h2>
 					</div>
                                 </div>
-				<div id="people">
+				<div id="about">
 					<div class="image-menu">
-						<img id="people-pic" src="<?php bloginfo('template_url'); ?>/images/people.jpg"/>
+						<img id="about-pic" src="<?php bloginfo('template_url'); ?>/images/people.jpg"/>
 						<h2>
 							<span>                                  
-								<?php echo 'People'; ?>
+								About us
 							</span>
 						</h2>
 					</div>
@@ -69,34 +69,72 @@
 <script>
 (function($){
 var unslide = function() {
+    $('#page').css('min-height', $(window).height());
+    $('#page').fadeIn(200);
+
+    $('#main-panel').fadeIn(800);
+
     var unslider = $('.banner').unslider({
         speed: 500,
-        delay: 10000,
+        delay: false,
         fluid: true 
     });
+
     $('.unslider-arrow').click(function() {
         var fn = this.className.split(' ')[1];
         unslider.data('unslider')[fn]();
     });
-    $('#main-panel').css('visibility', 'visible');
+
     $('.unslider-arrow').css('width', $('.unslider-arrow').height());
-    $('#people').css('height', $('.banner').height()/2);
-    $('#people').css('margin-left', $('.banner').width());
-    $('#people-pic').css('max-height', $('.banner').height()/2 - 7);
-    $('#people-pic').css('width', $('.banner').width()*0.4);
-    $('#people').fadeIn();
-    $('#inhopp-map').css('height', $('.banner').height()/2);
-    $('#inhopp-map').css('margin-left', $('.banner').width());
-    $('#map-pic').css('min-height', $('.banner').height()/2 - 7);
-    $('#map-pic').css('width', $('.banner').width()*0.4);
-    $('#inhopp-map').fadeIn();
 }
 
-$('.banner ul li img').first().load(function(){unslide()});
+var setupPage = function() {
+    setTimeout(function(){ 
+	$('#inhopp-map').fadeIn(400);
+    }, 50);
+    setTimeout(function(){ 
+        $('#about').fadeIn(400);
+    }, 150);
 
-$(window).resize(function(){unslide()});
+    if ($(window).width() <= 800) {
+	$('.banner').css('float', 'none');
+	$('.banner').css('width', $('#page').width()-50);
+	$('#inhopp-map').css('margin-left', 0);
+        $('#inhopp-map').css('height', $('.banner').height());
+        $('#inhopp-map').css('margin-top', -7);
+	$('#inhopp-map').css('margin-bottom', 10);
+        $('#map-pic').css('height', $('.banner').height());
+	$('#map-pic').css('width', $('.banner').width());
+        $('#inhopp-map .image-menu h2 span').css('margin-left', 0);
+	$('#about').css('margin-left', 0);
+        $('#about').css('height', $('.banner').height());
+        $('#about-pic').css('height', $('.banner').height());
+        $('#about-pic').css('width', $('.banner').width());
+	$('#about .image-menu h2 span').css('margin-left', 0);
+    }
+    else {
+	$('.banner').css('float', 'left');
+        $('.banner').css('width', '70%');
+	$('#inhopp-map').css('height', $('.banner').height()/2);
+	$('#inhopp-map').css('margin-left', $('.banner').width());
+        $('#inhopp-map').css('margin-bottom', 0);
+	$('#map-pic').css('height', $('.banner').height()/2 - 7);
+	$('#map-pic').css('width', $('.banner').width()*0.4);
+	$('#about').css('height', $('.banner').height()/2);
+	$('#about').css('margin-left', $('.banner').width());
+	$('#about-pic').css('height', $('.banner').height()/2 - 7);
+	$('#about-pic').css('width', $('.banner').width()*0.4);
+    }
 
-$(window).load(function(){unslide()});
+    $('#page').css('margin-left', ($(window).width() - $('#page').width())/2);
+    unslide();
+}
+
+$('.banner ul li img').first().load(function(){setupPage()});
+
+$(window).resize(function(){setupPage()});
+
+$(window).load(function(){setupPage()});
 
 })(jQuery);
 </script>

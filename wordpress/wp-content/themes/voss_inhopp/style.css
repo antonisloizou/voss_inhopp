@@ -1,5 +1,9 @@
 @import url("theme-style.css");
 
+body {
+  background-color: #000009;
+}
+
 .image-menu {
   position: relative;
   width: 100%;
@@ -19,7 +23,12 @@
    letter-spacing: -1px;  
    background: rgb(0, 0, 0); /* fallback color */
    background: rgba(0, 0, 0, 0.5);
-   padding: 10px; 
+   padding: 10px;
+}
+
+#about .image-menu h2 span,
+#inhopp-map .image-menu h2 span {
+   margin-left: 4px;
 }
 
 .site-title {
@@ -48,7 +57,8 @@
 }
 
 #page {
-  background-color: #000009;
+  display: none;
+  max-width: 1900px;
 }
 
 #masthead {
@@ -56,14 +66,15 @@
 }
 
 #main-panel {
+    text-align: center;
     position: relative;
     margin-left: 2.5%;
     margin-right: 2.5%;
-    max-width:95%;
-    visibility: hidden;
+    width:95%;
+    display: none;
 }
 
-#people {
+#about {
   display: none;
   padding: 5px;
 }
@@ -95,7 +106,7 @@
 
 .banner {
   position: relative;
-  max-width: 70%;
+  width: 70%;
   text-align: center;
   float: left;
   margin: 5px;
