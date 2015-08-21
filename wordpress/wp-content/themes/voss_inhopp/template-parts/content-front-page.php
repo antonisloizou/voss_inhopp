@@ -55,7 +55,7 @@
 						<img id="people-pic" src="<?php bloginfo('template_url'); ?>/images/people.jpg"/>
 						<h2>
 							<span>                                  
-								<?php echo 'People'; ?>
+								<?php echo 'About us'; ?>
 							</span>
 						</h2>
 					</div>
