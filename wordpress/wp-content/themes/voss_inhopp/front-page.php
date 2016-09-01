@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package voss_inhopp
+ * @package voss_innhopp
  */
 
 get_header(); ?>

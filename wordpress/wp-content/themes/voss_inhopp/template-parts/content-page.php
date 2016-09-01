@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package voss_inhopp
+ * @package voss_innhopp
  */
 
 ?>
@@ -16,14 +16,14 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'voss_inhopp' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'voss_innhopp' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php edit_post_link( esc_html__( 'Edit', 'voss_inhopp' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( esc_html__( 'Edit', 'voss_innhopp' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 

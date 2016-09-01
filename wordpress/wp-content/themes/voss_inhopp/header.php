@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package voss_inhopp
+ * @package voss_innhopp
  */
 
 ?><!DOCTYPE html>
@@ -23,7 +23,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'voss_inhopp' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'voss_innhopp' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
@@ -34,11 +34,11 @@
 			<?php endif; ?>
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 		-->
-		<img src="<?php bloginfo('template_url'); ?>/images/logo.png"/>
+            <a href="<?php echo site_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo.png"/></a>
 		</div><!-- .site-branding -->
 
 		<!--<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'voss_inhopp' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'voss_innhopp' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav> #site-navigation -->
 	</header><!-- #masthead -->

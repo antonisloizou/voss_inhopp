@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package voss_inhopp
+ * @package voss_innhopp
  */
 
 get_header(); ?>

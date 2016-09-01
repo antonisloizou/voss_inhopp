@@ -2,7 +2,7 @@
 /**
  * Template part for displaying posts.
  *
- * @package voss_inhopp
+ * @package voss_innhopp
  */
 
 ?>
@@ -13,7 +13,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php voss_inhopp_posted_on(); ?>
+			<?php voss_innhopp_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -22,20 +22,20 @@
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'voss_inhopp' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'voss_innhopp' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 		?>
 
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'voss_inhopp' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'voss_innhopp' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php voss_inhopp_entry_footer(); ?>
+		<?php voss_innhopp_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

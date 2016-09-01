@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package voss_inhopp
+ * @package voss_innhopp
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
