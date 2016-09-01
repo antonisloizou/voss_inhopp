@@ -99,7 +99,7 @@ div a h2 span {
 
 .unslider-arrow {
     position: absolute;
-    height: 5vw;
+    height: 4.92vw;
     width: 5vw;
     text-decoration: none;
     opacity: 0;
@@ -214,8 +214,7 @@ div a h2 span {
 #innhopp-nav ul li{
     cursor: pointer;
     float: left;
-    width: 30px;
-    height: 40px;
+    height: 43px;
     margin-left: 40px;
     margin-bottom: 10px;
     padding: 20px;

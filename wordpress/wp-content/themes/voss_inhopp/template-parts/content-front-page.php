@@ -51,7 +51,7 @@
                                 </div>
 				<div id="people">
 					<div class="image-menu">
-                        <a>
+                        <a href="">
                             <img id="people-pic" src="<?php bloginfo('template_url'); ?>/images/people.jpg"/>
                             <h2>
                                 <span>                                  
